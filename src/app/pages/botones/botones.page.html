@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+
+    <ion-title class="pleft">Botones</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="star"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="heart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Botones normales -->
+  <ion-button size="small" expand="full">Small</ion-button>
+  <ion-button size="default" expand="full">Default</ion-button>
+  <ion-button size="large" expand="full">Large</ion-button>
+
+  <!-- Boton de navegación -->
+  <ion-button class="mtop" expand="full" routerLink="/alert" color="dark">
+    Directo a las alertas
+  </ion-button>
+
+  <!-- ion-row y ion-col -->
+  <ion-row>
+    <ion-col size="6">
+        <ion-button class="mtop" expand="full" routerLink="/avatar" color="dark">
+          Avatares
+        </ion-button>
+    </ion-col>
+    <ion-col size="6">
+        <ion-button class="mtop" expand="full" routerLink="/action-sheet" color="dark">
+          Action-sheet
+        </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <!-- Fill -->
+  <ion-button class="mtop" fill="clear">Clear </ion-button>
+  <ion-button class="mtop" fill="outline">Outline </ion-button>
+  <ion-button class="mtop" fill="solid">solid </ion-button>
+
+</ion-content>
