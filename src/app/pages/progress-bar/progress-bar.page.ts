@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgressBarPage implements OnInit {
 
+  progress= 0.05;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  cambioRango( event ){
+    this.progress = event.detail.value/100;
+    console.log(this.progress);
   }
 
 }
