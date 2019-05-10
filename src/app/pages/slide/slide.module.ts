@@ -5,14 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SegmentPage } from './segment.page';
-import { ComponentsModule } from 'src/app/components/components.module';
-import { PipesModule } from 'src/app/pipes/pipes.module';
+import { SlidePage } from './slide.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: SegmentPage
+    component: SlidePage
   }
 ];
 
@@ -21,10 +19,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes),
-    ComponentsModule,
-    PipesModule
+    RouterModule.forChild(routes)
   ],
-  declarations: [SegmentPage]
+  declarations: [SlidePage]
 })
-export class SegmentPageModule {}
+export class SlidePageModule {}

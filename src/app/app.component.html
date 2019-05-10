@@ -1,7 +1,11 @@
 <ion-app>
 
-  <app-menu></app-menu>
+  <ion-split-pane contentId="principal">
+    <app-menu></app-menu>
+  
+    <!-- id necesario para hacer relación con el menu -->
+    <ion-router-outlet id="principal"></ion-router-outlet>
+  </ion-split-pane>
 
-  <!-- id necesario para hacer relación con el menu -->
-  <ion-router-outlet id="principal"></ion-router-outlet>
 </ion-app>
+

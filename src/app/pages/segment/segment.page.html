@@ -15,4 +15,26 @@
 
 <ion-content>
 
+  <ion-list class="animated fadIn fast">
+    <ion-item *ngFor="let heroe of (heores | async)| filtro: publisher:'publisher'">
+      <h3>{{ heroe.superhero }} <small>{{ heroe.alter_ego }}</small></h3>
+      <ion-label>{{ heroe.first_appearance }} </ion-label>
+      <ion-label slot="end" text-right>
+        {{ heroe.publisher}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngIf="(heores | async) === null">
+    <ion-item *ngFor="let item of [1,1,1,1,1,1,1,1,1]" class="animated flash slow infinite">
+      <h3><ion-skeleton-text width="70%"></ion-skeleton-text></h3>
+      <ion-label>
+        <p><ion-skeleton-text width="70%"></ion-skeleton-text></p>
+      </ion-label>
+      <ion-label slot="end" text-right>
+        <ion-skeleton-text width="40px"></ion-skeleton-text>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonSegment } from '@ionic/angular';
+import { DataService } from 'src/app/services/data.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-segment',
@@ -9,16 +11,24 @@ import { IonSegment } from '@ionic/angular';
 export class SegmentPage implements OnInit {
 
   @ViewChild(IonSegment) segment: IonSegment;
+  heores: Observable<any>;
+  publisher: string = '';
 
-  constructor() { }
+  constructor(private dataservice: DataService) { }
 
   ngOnInit() {
-    this.segment.value = 'Todos';
+    this.heores = this.dataservice.getHeroes();
+    this.segment.value = 'Todos'; 
   }
 
   segmentChanged(event){
-    const valorSegmento = event.detail.value;
-    console.log(valorSegmento);
+    const valorSegmento :string = event.detail.value;
+    if(valorSegmento === 'Todos'){
+      this.publisher = '';
+      return;
+    }
+    this.publisher = valorSegmento;
+    console.log(this.publisher);
   }
 
 }

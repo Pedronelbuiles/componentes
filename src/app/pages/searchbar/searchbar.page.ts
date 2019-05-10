@@ -19,7 +19,7 @@ export class SearchbarPage implements OnInit {
             .subscribe( albumes => {
               console.log(albumes);
               this.albumes = albumes;
-            })
+            });
 
   }
 
